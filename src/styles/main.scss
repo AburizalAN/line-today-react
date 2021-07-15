@@ -1,0 +1,136 @@
+.navbar {
+  padding: 0;
+  .bottomNav {
+    background-color: rgb(233, 233, 233);
+  }
+  .topNav {
+    padding: 0.5rem 0;
+  }
+  .navbar-brand {
+    font-weight: 500;
+  }
+  .navbar-toggler {
+    border: none;
+    outline: none;
+    &:focus {
+      outline: none;
+      border: none;
+      box-shadow: none;
+    }
+  }
+  .bookmarks-nav {
+    text-decoration: none;
+    font-weight: 600;
+    color: rgb(80, 80, 80);
+  }
+  .navbar-nav {
+    .nav-item {
+      min-width: max-content !important;
+      margin-right: 1rem;
+      .nav-link {
+        cursor: pointer;
+      }
+      .active {
+        font-weight: 600;
+      }
+    }
+    .swiper-slide {
+      width: auto;
+    }
+  }
+  .menu-expand {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-left: 1px solid #bebebe;
+    padding: 0.3rem 1rem;
+    .icon {
+      animation-name: btnAnimation;
+      animation-duration: .3s;
+    }
+  }
+  .category-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    overflow: hidden;
+    transition: .3s;
+    height: 300px;
+    z-index: 100;
+    background-color: white;
+    &-close {
+      @extend .category-dropdown;
+      height: 0;
+    }
+    &-link {
+      padding: 0.4rem 0.8rem;
+      display: block;
+      text-decoration: none;
+      border-radius: 100px;
+      color: rgb(85, 85, 85);
+      background-color: rgb(255, 255, 255);
+      border: 1px solid rgb(177, 177, 177);
+      &.active {
+        color: white;
+        background-color: rgb(36, 36, 73);
+        border: 1px solid rgb(36, 36, 73);
+      }
+    }
+  }
+  .sidebarMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 350px;
+    background-color: rgb(231, 231, 231);
+    z-index: 100;
+    transform: translateX(0);
+    transition: .4s;
+    overflow-y: auto;
+    padding: 0.5rem;
+    &-link {
+      display: block;
+      text-decoration: none;
+      padding: 1rem 2rem;
+      color: rgb(41, 41, 41);
+      &.active {
+        background-color: rgb(41, 41, 41);
+        color: white;
+      }
+    }
+    &-close {
+      @extend .sidebarMenu;
+      transform: translateX(-100%);
+    }
+  }
+}
+
+.thumbnail {
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card-title a {
+  text-decoration: none;
+  color: rgb(26, 58, 77);
+}
+
+.btn-bookmarks {
+  .icon {
+    transition: .3s;
+    animation-name: btnAnimation;
+    animation-duration: .3s;
+  }
+  svg {
+    width: 40px;
+    height: 40px;
+    color: rgb(238, 34, 34);
+  }
+}
+
+@keyframes btnAnimation {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
