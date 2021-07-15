@@ -51,7 +51,7 @@ const Home = ({match, data, setMenuSelected}) => {
                   itemData?.sections[0]?.articles?.map(article => (
                     <div className="col-lg-4 py-3 d-flex" key={article?.id}>
                       <div className="card" style={{flex: 1}}>
-                        <img src={`https://obs.line-scdn.net/${article?.thumbnail?.hash}`} className="card-img-top thumbnail" alt={article?.title} />
+                        <img src={`https://obs.line-scdn.net/${article?.thumbnail?.hash}/w580`} className="card-img-top thumbnail" alt={article?.title} />
                         <div className="card-body">
                           <div className="d-flex align-items-start">
                             <h5 className="card-title"><a href={article?.url?.url}>{article?.title}</a></h5>
